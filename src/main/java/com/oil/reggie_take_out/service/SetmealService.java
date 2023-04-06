@@ -1,5 +1,6 @@
 package com.oil.reggie_take_out.service;
 
+import com.oil.reggie_take_out.dto.SetmealDto;
 import com.oil.reggie_take_out.entity.Setmeal;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -10,4 +11,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface SetmealService extends IService<Setmeal> {
 
+    void saveWithDish(SetmealDto setmealDto);
+    void updatWithDish(SetmealDto setmealDto);
+    void deleteWithDish(Long ids);
 }

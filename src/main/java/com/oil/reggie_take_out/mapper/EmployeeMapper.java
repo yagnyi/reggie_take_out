@@ -2,6 +2,8 @@ package com.oil.reggie_take_out.mapper;
 
 import com.oil.reggie_take_out.entity.Employee;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
 * @author Administrator
@@ -9,6 +11,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2023-03-22 16:17:45
 * @Entity com.oil.reggie_take_out.entity.Employee
 */
+
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
 }

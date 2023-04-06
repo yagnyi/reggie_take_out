@@ -1,10 +1,9 @@
 package com.oil.reggie_take_out.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
@@ -18,6 +17,7 @@ public class Employee implements Serializable {
 
     private String name;
 
+    //@TableField(value = "username")
     private String username;
 
     private String password;
@@ -29,13 +29,13 @@ public class Employee implements Serializable {
     private String idNumber;
 
     private Integer status;
-
-    private Date createTime;
-
-    private Date updateTime;
-
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updateTime;
+    @TableField(fill = FieldFill.INSERT)
     private Long createUser;
-
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updateUser;
 
     private static final long serialVersionUID = 1L;

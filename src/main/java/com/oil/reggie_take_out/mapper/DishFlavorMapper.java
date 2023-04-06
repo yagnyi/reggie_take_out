@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2023-03-22 16:17:45
 * @Entity com.oil.reggie_take_out.entity.DishFlavor
 */
+
 public interface DishFlavorMapper extends BaseMapper<DishFlavor> {
 
 }

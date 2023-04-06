@@ -1,7 +1,11 @@
 package com.oil.reggie_take_out.service;
 
+import com.oil.reggie_take_out.dto.DishDto;
 import com.oil.reggie_take_out.entity.Dish;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.oil.reggie_take_out.entity.DishFlavor;
+
+import java.util.List;
 
 /**
 * @author Administrator
@@ -10,4 +14,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface DishService extends IService<Dish> {
 
+    void saveWithFilvor (DishDto dishDto);
+    DishDto getDishDtoById(Long id);
+    void updateDishDto(DishDto dishDto);
+
+    void deleteDishDto(Long ids);
 }
